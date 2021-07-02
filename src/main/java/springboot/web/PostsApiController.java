@@ -27,4 +27,10 @@ public class PostsApiController {
     public PostsResponseDto findById(@PathVariable Long id){
         return postsService.findById(id);
     }
+
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id) {
+        postsService.delete(id);
+        return id;   //postsService.delete(id); 에서 삭제로직이 끝났기떄문에 어떤값이든 보내도 됨 빈값이나 안보내면 에러
+    }
 }
