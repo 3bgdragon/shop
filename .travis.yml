@@ -7,7 +7,7 @@ only:
   - master
 
 before_install:
-
+2
   chmod +x gradlew
 cache:
 directories:
