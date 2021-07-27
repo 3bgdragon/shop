@@ -11,8 +11,9 @@ cache:
     - '$HOME/.gradle'
 script: "./gradlew clean build"
 before_install:
-  gradle -b wrapper.gradle wrapper
   - chmod +x gradlew
+  gradle -b wrapper.gradle wrapper
+
 
 before_deploy:
   - mkdir -p before-deploy # zip에 포함시킬 파일들을 담을 디렉토리 생성'
